@@ -85,15 +85,16 @@ this_dir = this_file.parent
 docs_dir = this_dir.joinpath('docs')
 for doc in docs_dir.iterdir():
     if doc.suffix == '.md':
-        link_name = " ".join(doc.stem.split("-")).capitalize()
+        link_name = " ".join(doc.stem.split("_")).capitalize()
         cog.outl(f'* [{link_name}](./{doc.name})')
 cog.outl('```')  # create a new code block for the end
 ]]]
 ```
 ### Table of contents
-* [Calling shell commands](./calling-shell-commands.md)
+* [Calling shell commands](./calling_shell_commands.md)
+* [Cog as a pre-commit hook](./cog_as_a_pre-commit_hook.md)
 ```
-[[[end]]] (checksum: dc1b2be2bdb9b1c2ac7b614e87146913)
+[[[end]]] (checksum: 2d525f1a6c118c300dd64b74f9fbfd31)
 ```
 
 ## Running cog
