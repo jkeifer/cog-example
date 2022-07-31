@@ -80,17 +80,20 @@ of contents:
 ```
 [[[cog
 cog.outl('```')  # this is to end our example code block before the output
+cog.outl('### Table of contents')
 this_dir = this_file.parent
 docs_dir = this_dir.joinpath('docs')
 for doc in docs_dir.iterdir():
     if doc.suffix == '.md':
-        cog.outl(f'[{" ".join(doc.stem.split("-"))}](./{doc.name})')
+        link_name = " ".join(doc.stem.split("-")).capitalize()
+        cog.outl(f'* [{link_name}](./{doc.name})')
 cog.outl('```')  # create a new code block for the end
 ]]]
 ```
-[calling shell commands](./calling-shell-commands.md)
+### Table of contents
+* [Calling shell commands](./calling-shell-commands.md)
 ```
-[[[end]]] (checksum: 2cf6db836154d4dbd2db5097471345bb)
+[[[end]]] (checksum: dc1b2be2bdb9b1c2ac7b614e87146913)
 ```
 
 ## Running cog
