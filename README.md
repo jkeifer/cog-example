@@ -118,5 +118,5 @@ dedicated virtual environment. Doing so installs all the included
 scripts to the venv bin directory, and will pull in the cogapp python
 package to install cog to the venv.
 
-Also included are `cog-check`, a command to check if cog will make changes to
+Also included is `cog-check`, a command to check if cog will make changes to
 any files.
