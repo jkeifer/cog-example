@@ -51,7 +51,7 @@ via a `__repr__` method.
 Lastly, the checksums are an addition by cog to ensure no manual changes have
 been made to the cog output between executions. If the existing output checksum
 does not match the stated on, it will raise an error so the issue can be
-reconcilled. 
+reconcilled.
 
 Anyway, on to the `inFile` attribute:
 
@@ -61,8 +61,8 @@ from pathlib import Path
 this_file = Path(cog.inFile).resolve()
 cog.outl(str(this_file))
 ]]]
-/Users/jkeifer/cog-example/README.md
-[[[end]]] (checksum: 42b80144b5a514c30eb08564a9227167)
+/Users/jkeifer/dev/cog-example/README.md
+[[[end]]] (checksum: 38004344e2eacafb4ed60f6315b040a7)
 ```
 
 `inFile` indeed allows us to reference the input file, as promised.
@@ -111,3 +111,12 @@ The options provided to cog here are as follows:
 
 * `-r`: run cog in place against each input file, overwriting them with the generated output
 * `-c`: use output checksums to protect manual changes from being clobbered unintentionally
+
+This command is provided by a convenience script included in the repo,
+`cog-run`. In fact, this project can be `pip`-installed, ideally in a
+dedicated virtual environment. Doing so installs all the included
+scripts to the venv bin directory, and will pull in the cogapp python
+package to install cog to the venv.
+
+Also included are `cog-check`, a command to check if cog will make changes to
+any files.
